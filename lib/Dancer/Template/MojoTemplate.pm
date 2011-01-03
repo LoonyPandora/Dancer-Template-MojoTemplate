@@ -26,7 +26,7 @@ sub render {
     my ($self, $template, $tokens) = @_;
 
     my $content = eval {
-        $_engine->prepend("my \$t = \$_[0];");
+        $_engine->prepend($self->config->{prepend}."my \$t = \$_[0];");
         $_engine->render_file($template, $tokens)
     };
 
@@ -48,7 +48,7 @@ Dancer::Template::MojoTemplate - Mojo::Template wrapper for Dancer
 
 =head1 VERSION
 
-version 0.01
+version 0.002
 
 =head1 DESCRIPTION
 
