@@ -26,7 +26,6 @@ sub render {
     my ($self, $template, $tokens) = @_;
 
     my $content = eval {
-        $_engine->prepend($self->config->{prepend}."my \$t = \$_[0];");
         $_engine->render_file($template, $tokens)
     };
 
@@ -64,11 +63,12 @@ B<set> keyword.
 
 You can configure L<Mojo::Template> :
 
-    template: mojo_template
+    template: 'mojo_template'
     engines:
         mojo_template:
-            trim_mark    => '-',
-            auto_escape  => 1,
+            auto_escape: 1
+            trim_mark: '-'
+            prepend: 'my $t = $_[0];'
 
 =head1 SEE ALSO
 
