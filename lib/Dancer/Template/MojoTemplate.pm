@@ -47,7 +47,7 @@ Dancer::Template::MojoTemplate - Mojo::Template wrapper for Dancer
 
 =head1 VERSION
 
-version 0.002
+version 0.1.0
 
 =head1 DESCRIPTION
 
