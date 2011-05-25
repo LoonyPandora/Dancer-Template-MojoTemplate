@@ -47,19 +47,19 @@ Dancer::Template::MojoTemplate - Mojo::Template wrapper for Dancer
 
 =head1 VERSION
 
-version 0.1.0
+version 0.2.0
 
 =head1 DESCRIPTION
 
-This class is an interface between Dancer's template engine abstraction layer
-and the L<Mojo::Template> module.
+This is an interface between Dancer's template engine abstraction layer and
+the L<Mojo::Template> module.
 
 In order to use this engine, use the template setting:
 
     template: mojo_template
 
-This can be done in your config.yml file or directly in your app code with the
-B<set> keyword.
+This can be done in your config.yml file or directly in your app code with
+the B<set> keyword.
 
 You can configure L<Mojo::Template> :
 
@@ -86,3 +86,4 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
